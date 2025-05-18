@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  background-color: #4b007d;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+#menu-button {
+  display: block;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: #bc6c25;
+  border-radius: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1rem;
+}
+
+main h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 0.5rem; /* Reduce horizontal space */
+  row-gap: 1rem;       /* Optional: reduce vertical space too */
+  justify-items: center;
+  align-items: start;
+}
+
+figure {
+  margin: 0.25rem;
+  text-align: center;
+}
+
+
+
+img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 5px;
+  display: block;
+}
+figcaption {
+  margin-top: 0.2rem; /* Reduce space below image */
+  font-weight: bold;
+}
+
+
+footer {
+  background-color: #4b007d;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
