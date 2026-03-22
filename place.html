@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madagascar - Official Info</title>
+    <meta name="description" content="Assignment for WDD 131: Madagascar location page with responsive design and wind chill calculation.">
+    <meta name="author" content="Your Name">
+    
+    <link rel="stylesheet" href="styles/place.css">
+    
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Madagascar</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                    <source media="(min-width: 768px)" srcset="images/view.webp">
+                    <img src="images/web.webp" ...>
+            </picture>
+        </div>
+
+        <div class="content-wrapper">
+            
+            <section class="card data-card">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 587,041 sq km</li>
+                    <li><strong>Population:</strong> 27,691,018</li>
+                    <li><strong>Capital:</strong> Antananarivo</li>
+                    <li><strong>Languages:</strong> Malagasy, French</li>
+                    <li><strong>Currency:</strong> Malagasy Ariary</li>
+                    <li><strong>Time Zone:</strong> UTC+3</li>
+                    <li><strong>Calling Code:</strong> +261</li>
+                    <li><strong>Internet TLD:</strong> .mg</li>
+                </ul>
+            </section>
+
+            <section class="card weather-card">
+                <div class="weather-header">
+                    <h2>Weather</h2>
+                    <span class="mobile-icon">
+                        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
+                        </svg>
+                    </span>
+                </div>
+                <ul>
+                    <li><strong>Temperature:</strong> <span id="temp-val">10</span>°C</li>
+                    <li><strong>Conditions:</strong> Partly Cloudy</li>
+                    <li><strong>Wind:</strong> <span id="wind-val">5</span> km/h</li>
+                    <li><strong>Wind Chill:</strong> <span id="windchill-val">N/A</span></li>
+                </ul>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🌸 Rubia Magdalena Francesco 🌸 Madagascar</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>

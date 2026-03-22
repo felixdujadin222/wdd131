@@ -1,0 +1,145 @@
+/* --- 1. Global Variables & Reset --- */
+:root {
+    --primary-red: #ce1126;
+    --primary-green: #007e3a;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --glass-bg: rgba(255, 255, 255, 0.9); /* Semi-transparent for desktop */
+    --font-main: 'Roboto', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* --- 2. Header & Footer --- */
+header, footer {
+    background-color: var(--primary-red);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+/* --- 3. Mobile View (Default) --- */
+.hero {
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto; /* Responsive scaling for mobile */
+    display: block;
+    border-bottom: 5px solid var(--primary-green);
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column; /* Stacks cards on mobile */
+    gap: 20px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.card h2 {
+    background-color: var(--primary-green);
+    color: var(--white);
+    padding: 12px;
+    text-align: center;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+/* Container for Title + SVG Icon */
+.weather-header {
+    background-color: var(--primary-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.card ul {
+    list-style: none;
+    padding: 15px;
+}
+
+.card li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card li:last-child {
+    border-bottom: none;
+}
+
+.card li strong {
+    color: var(--primary-green);
+}
+
+/* --- 4. Desktop View (Wider than 768px) --- */
+@media (min-width: 768px) {
+    main {
+        position: relative; /* Context for the floating cards */
+    }
+
+    .hero img {
+        height: 600px; /* Caps image size on desktop */
+        object-fit: cover; /* Prevents stretching */
+    }
+
+    .content-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 600px; /* Match the hero image height */
+        flex-direction: row; /* Side-by-side cards */
+        justify-content: space-around;
+        align-items: center; /* Centers cards vertically over the image */
+        max-width: 1200px;
+        padding: 0 40px;
+        pointer-events: none; /* Allows clicking "through" the container to the image */
+    }
+
+    .card {
+        background-color: var(--glass-bg); /* Transparency effect */
+        width: 300px;
+        pointer-events: auto; /* Re-enables interaction for the cards */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    /* Requirement: Pseudo-element for Desktop Icon */
+    .weather-card h2::after {
+        content: " ⛅";
+    }
+
+    /* Hide the Mobile SVG on Desktop */
+    .mobile-icon {
+        display: none;
+    }
+}
