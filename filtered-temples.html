@@ -3,25 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A professional gallery showcasing a filtered collection of historic and modern temples.">
     <meta name="author" content="Michael Felix">
-    <title>Temple Album | Professional Gallery</title>
-    <meta name="description" content="A curated professional album of historic and modern temples.">
+    
+    <title>Filtered Temples | Temple Album</title>
+    
     <link rel="stylesheet" href="styles/filtered-temples.css">
-    <script src="script/filtered-temples.js" defer></script>
+    <script src="scripts/filtered-temples.js" defer></script>
 </head>
 <body>
 
     <header>
-        <div class="header-container">
-            <h1>Temple Album</h1>
-            <button id="menu-button" aria-label="Toggle Menu" aria-expanded="false">
-                <span class="menu-icon">☰</span>
-            </button>
-        </div>
-        
-        <nav id="primary-nav">
-            <ul class="nav-list">
-                <li><a href="#" id="home" class="active">Home</a></li>
+        <h1>Temple Album</h1>
+        <nav>
+            <button id="menu-button" aria-label="Toggle Menu" aria-expanded="false">☰</button>
+            <ul id="primary-nav">
+                <li><a href="#" id="home">Home</a></li>
                 <li><a href="#" id="old">Old</a></li>
                 <li><a href="#" id="new">New</a></li>
                 <li><a href="#" id="large">Large</a></li>
@@ -31,10 +28,8 @@
     </header>
 
     <main>
-        <div class="content-header">
-            <h2 id="gallery-title">Home</h2>
-        </div>
-        <section id="temples-container" class="grid-container"></section>
+        <h2>Home</h2>
+        <div id="temples-container"></div>
     </main>
 
     <footer>
