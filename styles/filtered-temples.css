@@ -1,128 +1,255 @@
 :root {
-    --primary-color: #2c3e50;
-    --accent-color: #34495e;
-    --text-color: #333;
-    --bg-color: #f9f9f9;
+
+    --primary-color: #2c3e50;
+
+    --accent-color: #34495e;
+
+    --text-color: #333;
+
+    --bg-color: #f9f9f9;
+
 }
+
+
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--bg-color);
-    margin: 0;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-color: var(--bg-color);
+
+    margin: 0;
+
 }
+
+
 
 header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem;
-    text-align: center;
+
+    background-color: var(--primary-color);
+
+    color: white;
+
+    padding: 1rem;
+
+    text-align: center;
+
 }
+
+
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
+
+    list-style: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    padding: 0;
+
 }
+
+
 
 nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
 }
+
+
 
 nav a:hover {
-    text-decoration: underline;
+
+    text-decoration: underline;
+
 }
+
+
 
 main {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 15px;
+
+    max-width: 1200px;
+
+    margin: 20px auto;
+
+    padding: 0 15px;
+
 }
+
+
 
 .res-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 25px;
+
 }
+
+
 
 /* Card Styling */
+
 figure {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+
+    background: white;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    margin: 0;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    transition: transform 0.2s;
+
 }
+
+
 
 figure:hover {
-    transform: translateY(-5px);
+
+    transform: translateY(-5px);
+
 }
+
+
 
 figure img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-top-left-radius: 8px;
+
+    border-top-right-radius: 8px;
+
 }
+
+
 
 figure h3 {
-    padding: 10px 15px 5px;
-    margin: 0;
-    color: var(--primary-color);
+
+    padding: 10px 15px 5px;
+
+    margin: 0;
+
+    color: var(--primary-color);
+
 }
+
+
 
 figure p {
-    padding: 5px 15px;
-    margin: 0;
-    font-size: 0.9rem;
+
+    padding: 5px 15px;
+
+    margin: 0;
+
+    font-size: 0.9rem;
+
 }
+
+
 
 figure p span {
-    font-weight: bold;
+
+    font-weight: bold;
+
 }
 
+
+
 footer {
-    text-align: center;
-    padding: 20px;
-    background: var(--primary-color);
-    color: white;
-    margin-top: 40px;
+
+    text-align: center;
+
+    padding: 20px;
+
+    background: var(--primary-color);
+
+    color: white;
+
+    margin-top: 40px;
+
 }
+
+
+
 
 
 /* --- Media Query for Mobile Views (Screens smaller than 600px) --- */
+
 @media (max-width: 600px) {
-    /* Stack the navigation items vertically on small screens */
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
 
-    /* Adjust the main heading size for mobile */
-    header h1 {
-        font-size: 1.5rem;
-    }
+    /* Stack the navigation items vertically on small screens */
 
-    /* Ensure the grid shows only 1 column on very small phones */
-    .res-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
+    nav ul {
 
-    /* Optional: Style for your hamburger menu button if you have one */
-    #menu-button {
-        display: block; /* Show the button only on mobile */
-        margin: 0 auto;
-        font-size: 2rem;
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
-    }
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+
+    }
+
+
+
+    /* Adjust the main heading size for mobile */
+
+    header h1 {
+
+        font-size: 1.5rem;
+
+    }
+
+
+
+    /* Ensure the grid shows only 1 column on very small phones */
+
+    .res-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+    }
+
+
+
+    /* Optional: Style for your hamburger menu button if you have one */
+
+    #menu-button {
+
+        display: block; /* Show the button only on mobile */
+
+        margin: 0 auto;
+
+        font-size: 2rem;
+
+        background: none;
+
+        border: none;
+
+        color: white;
+
+        cursor: pointer;
+
+    }
+
 }
