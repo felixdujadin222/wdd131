@@ -68,7 +68,7 @@ const temples = [
         location: "Nauvoo, Illinois, United States",
         dedicated: "2002, June, 27",
         area: 54000,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/nauvoo-illinois/400x250/nauvoo-temple-736408-wallpaper.jpg"
+        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/nauvoo-illinois-temple/nauvoo-illinois-temple-42924.jpg"
     }
 ];
 
