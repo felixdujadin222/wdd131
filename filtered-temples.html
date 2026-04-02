@@ -3,21 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A professional gallery showcasing a filtered collection of historic and modern temples.">
-    <meta name="author" content="Michael Felix">
-    
-    <title>Filtered Temples | Temple Album</title>
-    
+    <title>Temple Album - Filtered Views</title>
+    <meta name="description" content="WDD 131 Assignment - Filtered Temples">
     <link rel="stylesheet" href="styles/filtered-temples.css">
     <script src="scripts/filtered-temples.js" defer></script>
 </head>
 <body>
-
     <header>
         <h1>Temple Album</h1>
         <nav>
-            <button id="menu-button" aria-label="Toggle Menu" aria-expanded="false">☰</button>
-            <ul id="primary-nav">
+            <ul id="nav-menu">
                 <li><a href="#" id="home">Home</a></li>
                 <li><a href="#" id="old">Old</a></li>
                 <li><a href="#" id="new">New</a></li>
@@ -28,14 +23,14 @@
     </header>
 
     <main>
-        <h2>Home</h2>
-        <div id="temples-container"></div>
+        <h2 id="page-title">Home</h2>
+        <div id="temple-cards-container" class="res-grid">
+            </div>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> | Michael Felix | Nigeria</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
+        <p>&copy; <span id="currentyear"></span> | Your Name | WDD 131</p>
+        <p id="lastModified"></p>
     </footer>
-
 </body>
 </html>
