@@ -1,193 +1,34 @@
-/* --- CSS VARIABLES --- */
 :root {
-    --primary-color: #2c3e50;
-    --accent-color: #34495e;
-    --text-color: #333;
-    --bg-color: #f4f4f4;
-    --card-bg: #ffffff;
-    --nav-hover: #1a252f;
+    --primary: #2c3e50;
+    --accent: #34495e;
+    --bg: #f9f9f9;
 }
 
-/* --- BASIC RESET & BODY --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+body { font-family: sans-serif; background: var(--bg); margin: 0; }
+header { background: var(--primary); color: white; padding: 1rem; text-align: center; }
 
-body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-}
+/* Navigation */
+#menu-button { display: none; font-size: 2rem; background: none; border: none; color: white; cursor: pointer; }
+#nav-menu { list-style: none; display: flex; justify-content: center; gap: 20px; padding: 0; background: var(--accent); }
+#nav-menu a { color: white; text-decoration: none; padding: 1rem; display: block; }
 
-/* --- HEADER & NAVIGATION --- */
-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1.5rem;
-    text-align: center;
-}
-
-header h1 {
-    margin-bottom: 1rem;
-}
-
-nav {
-    background-color: var(--accent-color);
-}
-
-/* Desktop Navigation */
-#primary-nav {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-#primary-nav li {
-    flex: 1;
-    text-align: center;
-}
-
-#primary-nav a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 1rem;
-    font-weight: 600;
-    transition: background 0.3s;
-}
-
-#primary-nav a:hover {
-    background-color: var(--nav-hover);
-    text-decoration: underline;
-}
-
-/* Hide Hamburger Button on Desktop */
-#menu-button {
-    display: none;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    padding: 0.5rem;
-}
-
-/* --- MAIN CONTENT --- */
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--accent-color);
-    display: inline-block;
-    width: 100%;
-    padding-bottom: 0.5rem;
-}
-
-/* --- RESPONSIVE GRID --- */
-#temples-container {
+.res-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
-/* --- TEMPLE CARD STYLING --- */
-.temple-card {
-    background-color: var(--card-bg);
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
+figure { background: white; border: 1px solid #ddd; border-radius: 8px; margin: 0; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+figure img { width: 100%; height: 250px; object-fit: cover; }
+figure h3 { padding: 10px; margin: 0; background: var(--primary); color: white; }
+figure p { padding: 5px 10px; }
 
-.temple-card h3 {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem;
-    margin: 0;
-}
+footer { text-align: center; padding: 20px; background: var(--primary); color: white; }
 
-.temple-card p {
-    padding: 0.5rem 1rem;
-    font-size: 0.95rem;
-}
-
-.temple-card p span {
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-.temple-card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    margin-top: auto; /* Pushes image to bottom of text content */
-    display: block;
-    transition: filter 0.3s ease;
-}
-
-/* Hover effect for accessibility/interactivity */
-.temple-card:hover img {
-    filter: brightness(1.1);
-}
-
-/* --- FOOTER --- */
-footer {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
-}
-
-footer p {
-    margin: 0.5rem 0;
-}
-
-/* --- MEDIA QUERIES (Mobile View) --- */
-@media (max-width: 768px) {
-    /* Show Hamburger Button */
-    #menu-button {
-        display: block;
-        width: 100%;
-        text-align: right;
-        padding-right: 1.5rem;
-    }
-
-    /* Hide Navigation Menu by default on mobile */
-    #primary-nav {
-        display: none;
-        flex-direction: column;
-    }
-
-    /* Show menu when JS adds the 'open' class */
-    #primary-nav.open {
-        display: flex;
-    }
-
-    #primary-nav li {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    /* Adjust Grid for smaller screens */
-    #temples-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
+/* Mobile View */
+@media (max-width: 650px) {
+    #menu-button { display: block; }
+    #nav-menu { display: none; flex-direction: column; width: 100%; }
+    #nav-menu.show { display: flex; }
 }
