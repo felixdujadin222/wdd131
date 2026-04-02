@@ -5,7 +5,7 @@ const temples = [
         location: "Aba, Nigeria",
         dedicated: "2005, August, 7",
         area: 11500,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/aba-nigeria-temple/aba-nigeria-temple-8209.jpg"
     },
     {
         templeName: "Manti Utah",
@@ -19,7 +19,7 @@ const temples = [
         location: "Payson, Utah, United States",
         dedicated: "2015, June, 7",
         area: 96630,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/aba-nigeria-temple/aba-nigeria-temple-8209.jpg"
     },
     {
         templeName: "Yigo Guam",
