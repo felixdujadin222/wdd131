@@ -1,3 +1,4 @@
+/* ── Global Resets ── */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,20 +6,23 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   background: #f4f6f9;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  color: #1e293b;
 }
 
+/* ── Header ── */
 header {
   background: #16213e;
   color: white;
   padding: 1.2rem;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header svg {
@@ -28,47 +32,52 @@ header svg {
 }
 
 header h1 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
+/* ── Layout ── */
 main {
   flex: 1;
   display: flex;
   justify-content: center;
-  padding: 2rem;
+  padding: 3rem 1rem;
 }
 
 .form-card {
   background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  width: 600px;
+  padding: 2.5rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 640px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
 .form-card h2 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  color: #16213e;
-  margin-bottom: 0.35rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
 }
 
 .form-card .subtitle {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #64748b;
   margin-bottom: 2rem;
 }
 
+/* ── Form Elements ── */
 .field-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 label {
   display: block;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #334155;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 label .optional {
@@ -78,125 +87,152 @@ label .optional {
   margin-left: 4px;
 }
 
-input, select, textarea {
+input[type="text"], 
+input[type="date"], 
+select, 
+textarea {
   width: 100%;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
 }
 
 input:focus, select:focus, textarea:focus {
   outline: none;
   border-color: #7c83fd;
-  box-shadow: 0 0 0 3px rgba(124, 131, 253, 0.15);
+  box-shadow: 0 0 0 4px rgba(124, 131, 253, 0.15);
 }
 
 textarea {
   resize: vertical;
-  min-height: 110px;
+  min-height: 120px;
   line-height: 1.6;
 }
 
-/* ── Star rating ── */
+/* ── Accessible Star Rating ── */
 .star-group {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 4px;
 }
 
+/* Visually hidden but accessible to validators/screen readers */
 .star-group input {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .star-group label {
-  font-size: 2rem;
+  font-size: 2.25rem;
   cursor: pointer;
-  color: #ccc;
+  color: #e2e8f0;
+  transition: color 0.2s ease;
+  margin: 0; /* Reset label margin */
 }
 
 .star-group input:checked ~ label,
 .star-group label:hover,
 .star-group label:hover ~ label {
-  color: orange;
+  color: #fbbf24; /* Golden yellow */
 }
 
-/* ── Checkboxes ── */
+/* ── Dynamic Checkboxes ── */
 .checkbox-group {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 0.5rem;
 }
 
 .checkbox-item {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 0.5rem 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+  gap: 10px;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
 }
 
 .checkbox-item:hover {
   border-color: #7c83fd;
-  background: #f5f3ff;
+  background: #f8faff;
 }
 
 .checkbox-item input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   accent-color: #7c83fd;
   cursor: pointer;
-  flex-shrink: 0;
 }
 
 .checkbox-item label {
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 0.875rem;
+  color: #475569;
   cursor: pointer;
 }
 
 /* ── Divider ── */
 .divider {
   border: none;
-  border-top: 1px solid #e2e8f0;
-  margin: 1.75rem 0;
+  border-top: 1px solid #f1f5f9;
+  margin: 2rem 0;
 }
 
-/* ── Submit button ── */
+/* ── Submit Button ── */
 .submit-btn {
   background: #7c83fd;
   color: white;
-  padding: 10px;
+  padding: 14px;
   border: none;
   cursor: pointer;
   width: 100%;
-  border-radius: 6px;
-  font-size: 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
   font-weight: 600;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.1s;
+  margin-top: 1rem;
 }
 
 .submit-btn:hover { background: #5a63f5; }
-.submit-btn:active { transform: scale(0.98); }
+.submit-btn:active { transform: translateY(1px); }
 
 /* ── Footer ── */
 footer {
   background: #1a0a2e;
-  color: #e2d5f0;
+  color: #cbd5e1;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
   font-size: 0.85rem;
-  line-height: 1.8;
+  margin-top: auto;
 }
 
-/* ── Responsive ── */
-@media (max-width: 480px) {
+#lastModified {
+  color: #7c83fd;
+  font-weight: 600;
+}
+
+/* ── Responsive Behavior ── */
+@media (max-width: 600px) {
   .form-card {
-    width: 100%;
     padding: 1.5rem;
+    border-radius: 0;
   }
-  .checkbox-group { grid-template-columns: 1fr; }
+  
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+  
+  header h1 {
+    font-size: 1.2rem;
+  }
 }
