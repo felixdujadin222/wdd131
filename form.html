@@ -6,7 +6,6 @@
   <title>Product Review Form | TechReview Hub</title>
   
   <meta name="description" content="Submit a professional product review for the latest tech gear on TechReview Hub.">
-  
   <meta name="author" content="Rubia Magdelena Francesco">
 
   <link rel="stylesheet" href="styles/form.css">
@@ -31,7 +30,7 @@
         <label for="product">Product Name</label>
         <select id="product" name="product" required>
           <option value="" disabled selected>Select a Product ...</option>
-          </select>
+        </select>
       </div>
 
       <hr class="divider">
@@ -68,10 +67,22 @@
       <div class="field-group">
         <label>Useful Features <span class="optional">(select all that apply)</span></label>
         <div class="checkbox-group" id="featuresGroup">
-          <label><input type="checkbox" name="features" value="durability"> Durability</label>
-          <label><input type="checkbox" name="features" value="ease"> Ease of Use</label>
-          <label><input type="checkbox" name="features" value="performance"> Performance</label>
-          <label><input type="checkbox" name="features" value="design"> Design</label>
+          <div class="checkbox-item">
+            <input type="checkbox" id="feat-static-1" name="features" value="durability">
+            <label for="feat-static-1">Durability</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="feat-static-2" name="features" value="ease">
+            <label for="feat-static-2">Ease of Use</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="feat-static-3" name="features" value="performance">
+            <label for="feat-static-3">Performance</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="feat-static-4" name="features" value="design">
+            <label for="feat-static-4">Design</label>
+          </div>
         </div>
       </div>
 
