@@ -21,7 +21,7 @@ const features = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Populate products dropdown
+  // 1. Populate Products Dropdown
   const productSelect = document.getElementById("product");
   if (productSelect) {
     products.forEach(p => {
@@ -32,33 +32,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Populate features checkboxes
+  // 2. Populate Features (Checkboxes)
   const featuresGroup = document.getElementById("featuresGroup");
   if (featuresGroup) {
-    // Clear existing static checkboxes if necessary, or just append
+    // CRITICAL: Clear the 4 static placeholders from HTML before injecting real data
     featuresGroup.innerHTML = ""; 
 
     features.forEach(f => {
+      // Create wrapper div for styling
       const div = document.createElement("div");
       div.className = "checkbox-item";
 
+      // Create checkbox input
       const input = document.createElement("input");
       input.type = "checkbox";
       input.id = f.id;
-      input.name = "features"; // Grouping by name is standard for forms
+      input.name = "features";
       input.value = f.name;
 
+      // Create label and link it to the input via 'for'
       const label = document.createElement("label");
-      label.htmlFor = f.id;
+      label.setAttribute("for", f.id);
       label.textContent = f.label;
 
+      // Append elements
       div.appendChild(input);
       div.appendChild(label);
       featuresGroup.appendChild(div);
     });
   }
 
-  // Update Footer Last Modified
+  // 3. Set Last Modified Date in Footer
   const lastModDisplay = document.getElementById("lastModified");
   if (lastModDisplay) {
     lastModDisplay.textContent = document.lastModified;
