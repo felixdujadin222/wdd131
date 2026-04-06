@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Review Form</title>
+  <title>Product Review Form | TechReview Hub</title>
+  
+  <meta name="description" content="Submit a professional product review for the latest tech gear on TechReview Hub.">
+  
+  <meta name="author" content="Rubia Magdelena Francesco">
 
-  <!-- Link CSS -->
   <link rel="stylesheet" href="styles/form.css">
 </head>
 <body>
 
 <header>
-  <svg viewBox="0 0 24 24">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
     <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-2h2zm0-4h-2V7h2z"/>
   </svg>
   <h1>TechReview Hub</h1>
@@ -28,7 +31,7 @@
         <label for="product">Product Name</label>
         <select id="product" name="product" required>
           <option value="" disabled selected>Select a Product ...</option>
-        </select>
+          </select>
       </div>
 
       <hr class="divider">
@@ -38,13 +41,17 @@
         <div class="star-group" role="group" aria-label="Rating from 1 to 5 stars">
           <input type="radio" id="star5" name="rating" value="5" required>
           <label for="star5" title="5 stars">&#9733;</label>
-          <input type="radio" id="star4" name="rating" value="4">
+          
+          <input type="radio" id="star4" name="rating" value="4" required>
           <label for="star4" title="4 stars">&#9733;</label>
-          <input type="radio" id="star3" name="rating" value="3">
+          
+          <input type="radio" id="star3" name="rating" value="3" required>
           <label for="star3" title="3 stars">&#9733;</label>
-          <input type="radio" id="star2" name="rating" value="2">
+          
+          <input type="radio" id="star2" name="rating" value="2" required>
           <label for="star2" title="2 stars">&#9733;</label>
-          <input type="radio" id="star1" name="rating" value="1">
+          
+          <input type="radio" id="star1" name="rating" value="1" required>
           <label for="star1" title="1 star">&#9733;</label>
         </div>
       </div>
@@ -60,7 +67,12 @@
 
       <div class="field-group">
         <label>Useful Features <span class="optional">(select all that apply)</span></label>
-        <div class="checkbox-group" id="featuresGroup"></div>
+        <div class="checkbox-group" id="featuresGroup">
+          <label><input type="checkbox" name="features" value="durability"> Durability</label>
+          <label><input type="checkbox" name="features" value="ease"> Ease of Use</label>
+          <label><input type="checkbox" name="features" value="performance"> Performance</label>
+          <label><input type="checkbox" name="features" value="design"> Design</label>
+        </div>
       </div>
 
       <hr class="divider">
@@ -85,7 +97,6 @@
   <p>Last Modification: <span id="lastModified"></span></p>
 </footer>
 
-<!-- Link JS -->
 <script src="scripts/form.js"></script>
 
 </body>
