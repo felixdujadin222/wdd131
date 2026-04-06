@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f9;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: #16213e;
+  color: white;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+header svg {
+  width: 32px;
+  height: 32px;
+  fill: #7c83fd;
+}
+
+header h1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.form-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 600px;
+}
+
+.form-card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #16213e;
+  margin-bottom: 0.35rem;
+}
+
+.form-card .subtitle {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+.field-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.4rem;
+}
+
+label .optional {
+  font-weight: 400;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  margin-left: 4px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #7c83fd;
+  box-shadow: 0 0 0 3px rgba(124, 131, 253, 0.15);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.6;
+}
+
+/* ── Star rating ── */
+.star-group {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.star-group input {
+  display: none;
+}
+
+.star-group label {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.star-group input:checked ~ label,
+.star-group label:hover,
+.star-group label:hover ~ label {
+  color: orange;
+}
+
+/* ── Checkboxes ── */
+.checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.checkbox-item:hover {
+  border-color: #7c83fd;
+  background: #f5f3ff;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #7c83fd;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkbox-item label {
+  margin: 0;
+  font-weight: 400;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+/* ── Divider ── */
+.divider {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 1.75rem 0;
+}
+
+/* ── Submit button ── */
+.submit-btn {
+  background: #7c83fd;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover { background: #5a63f5; }
+.submit-btn:active { transform: scale(0.98); }
+
+/* ── Footer ── */
+footer {
+  background: #1a0a2e;
+  color: #e2d5f0;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .form-card {
+    width: 100%;
+    padding: 1.5rem;
+  }
+  .checkbox-group { grid-template-columns: 1fr; }
+}

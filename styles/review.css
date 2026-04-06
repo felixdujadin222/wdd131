@@ -1,0 +1,216 @@
+/* ── Base Reset ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Body ── */
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #f4f6f9;
+  color: #1a1a2e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+header {
+  background: #16213e;
+  color: #e2e8f0;
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header svg {
+  width: 32px;
+  height: 32px;
+  fill: #7c83fd;
+}
+
+header h1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* ── Main Layout ── */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 2.5rem 1rem;
+}
+
+/* ── Card Container ── */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2rem;
+  width: 100%;
+  max-width: 640px;
+}
+
+/* ── Success banner ── */
+.success-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ecfdf5;
+  border: 1.5px solid #6ee7b7;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.success-banner svg {
+  width: 28px;
+  height: 28px;
+  fill: #059669;
+}
+
+.success-banner p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #065f46;
+}
+
+/* ── Review counter badge ── */
+.counter-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ede9fe;
+  color: #5b21b6;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 1.75rem;
+}
+
+/* ── Section heading ── */
+.card h2.section-heading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #16213e;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* ── Review rows ── */
+.review-row {
+  display: flex;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #f1f5f9;
+  gap: 1rem;
+}
+
+.review-row:last-child {
+  border-bottom: none;
+}
+
+.row-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  min-width: 130px;
+}
+
+.row-value {
+  font-size: 0.95rem;
+  color: #1a1a2e;
+  flex: 1;
+}
+
+/* ── Stars ── */
+.stars {
+  color: #f59e0b;
+  font-size: 1.1rem;
+}
+
+/* ── Empty values ── */
+.empty {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* ── Feature tags ── */
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.feature-tag {
+  background: #ede9fe;
+  color: #5b21b6;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* ── Buttons ── */
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 2rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-primary {
+  background: #7c83fd;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #5a63f5;
+}
+
+.btn-secondary {
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+}
+
+.btn-secondary:hover {
+  background: #e2e8f0;
+}
+
+/* ── Footer ── */
+footer {
+  background: #16213e;
+  color: #94a3b8;
+  text-align: center;
+  padding: 1.25rem;
+  font-size: 0.8rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .row-label {
+    min-width: 100px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}
