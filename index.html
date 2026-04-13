@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WanderLux Travel — curated luxury travel experiences to the world's most extraordinary destinations.">
+  <title>WanderLux Travel — Discover the World</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Wander<span>Lux</span></a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="nav__cta">Book Now</a></li>
+      </ul>
+      <button class="nav__burger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <nav class="nav__mobile" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Book Now</a>
+  </nav>
+
+  <main class="page-content">
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Hero banner">
+      <div class="hero__bg" role="presentation"></div>
+      <div class="hero__overlay" role="presentation"></div>
+      <div class="container">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Luxury Travel Experiences</p>
+          <h1>Your Journey to the <em>Extraordinary</em> Begins Here</h1>
+          <p>From Santorini sunsets to Patagonian glaciers — we craft bespoke travel experiences that turn destinations into memories that last a lifetime.</p>
+          <div class="hero__actions">
+            <a href="services.html" class="btn btn--primary">Explore Packages</a>
+            <a href="about.html" class="btn btn--outline">Our Story</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destinations Ticker -->
+    <div class="destinations" aria-hidden="true">
+      <div class="destinations__track">
+        <span>Santorini</span><span class="dot">&#9679;</span>
+        <span>Kyoto</span><span class="dot">&#9679;</span>
+        <span>Patagonia</span><span class="dot">&#9679;</span>
+        <span>Amalfi Coast</span><span class="dot">&#9679;</span>
+        <span>Bali</span><span class="dot">&#9679;</span>
+        <span>Iceland</span><span class="dot">&#9679;</span>
+        <span>Maldives</span><span class="dot">&#9679;</span>
+        <span>Marrakech</span><span class="dot">&#9679;</span>
+        <span>Patagonia</span><span class="dot">&#9679;</span>
+        <!-- duplicate for seamless loop -->
+        <span>Santorini</span><span class="dot">&#9679;</span>
+        <span>Kyoto</span><span class="dot">&#9679;</span>
+        <span>Patagonia</span><span class="dot">&#9679;</span>
+        <span>Amalfi Coast</span><span class="dot">&#9679;</span>
+        <span>Bali</span><span class="dot">&#9679;</span>
+        <span>Iceland</span><span class="dot">&#9679;</span>
+        <span>Maldives</span><span class="dot">&#9679;</span>
+        <span>Marrakech</span><span class="dot">&#9679;</span>
+      </div>
+    </div>
+
+    <!-- Featured Destinations -->
+    <section class="section" aria-labelledby="dest-heading">
+      <div class="container">
+        <p class="section-label reveal">&#127758; Featured Destinations</p>
+        <h2 id="dest-heading" class="reveal">Where Will You Go Next?</h2>
+        <p class="reveal" style="max-width:560px; margin-bottom:2rem;">Hand-picked experiences across every continent. Filter by region to find your perfect escape.</p>
+
+        <!-- Filter buttons -->
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:2rem;" role="group" aria-label="Filter destinations by region">
+          <button class="btn btn--dark active" data-filter="all" style="padding:0.5rem 1.2rem; font-size:0.85rem;">All</button>
+          <button class="btn btn--dark" data-filter="Europe"   style="padding:0.5rem 1.2rem; font-size:0.85rem; background:transparent; border:1.5px solid var(--border); color:var(--ink);">Europe</button>
+          <button class="btn btn--dark" data-filter="Asia"     style="padding:0.5rem 1.2rem; font-size:0.85rem; background:transparent; border:1.5px solid var(--border); color:var(--ink);">Asia</button>
+          <button class="btn btn--dark" data-filter="Americas" style="padding:0.5rem 1.2rem; font-size:0.85rem; background:transparent; border:1.5px solid var(--border); color:var(--ink);">Americas</button>
+        </div>
+
+        <div class="card-grid" id="dest-grid"></div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <div class="stats-bar" aria-label="Company statistics">
+      <div class="container">
+        <div>
+          <span class="stat__num" data-count="12500" data-suffix="+">0</span>
+          <p class="stat__label">Happy Travellers</p>
+        </div>
+        <div>
+          <span class="stat__num" data-count="85" data-suffix="+">0</span>
+          <p class="stat__label">Destinations</p>
+        </div>
+        <div>
+          <span class="stat__num" data-count="18" data-suffix=" yrs">0</span>
+          <p class="stat__label">Of Experience</p>
+        </div>
+        <div>
+          <span class="stat__num" data-count="98" data-suffix="%">0</span>
+          <p class="stat__label">Satisfaction Rate</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Choose Us -->
+    <section class="section" aria-labelledby="why-heading">
+      <div class="container">
+        <p class="section-label reveal">&#10024; Why WanderLux</p>
+        <h2 id="why-heading" class="reveal" style="margin-bottom:2.5rem;">Travel Crafted Around <em>You</em></h2>
+        <div class="features-grid">
+          <div class="feature reveal">
+            <div class="feature__icon">&#127968;</div>
+            <h3>Curated Stays</h3>
+            <p>Every property is personally vetted — boutique hotels, private villas, and luxury lodges chosen for character and quality.</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon">&#128205;</div>
+            <h3>Expert Local Guides</h3>
+            <p>Our in-destination experts are locals who know the hidden gems no guidebook will ever mention.</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon">&#128736;</div>
+            <h3>Fully Tailored</h3>
+            <p>No rigid group tours. Every itinerary is custom-built around your interests, pace, and travel style.</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon">&#128222;</div>
+            <h3>24/7 Support</h3>
+            <p>A dedicated travel specialist is always reachable — before, during, and after your journey.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section style="background:var(--sand); padding-block:4rem;" aria-label="Call to action">
+      <div class="container text-center">
+        <p class="section-label reveal">&#128640; Ready to explore?</p>
+        <h2 class="reveal" style="margin-bottom:1rem;">Start Planning Your Dream Trip</h2>
+        <p class="reveal" style="max-width:480px; margin-inline:auto; margin-bottom:2rem;">Tell us where you want to go. Our travel experts will take care of everything else.</p>
+        <a href="contact.html" class="btn btn--primary reveal">Get a Free Consultation</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">Wander<span>Lux</span></p>
+          <p>Crafting extraordinary travel experiences since 2006. Luxury, adventure, and culture — your world awaits.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <nav class="footer__links" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Book Now</a>
+          </nav>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <nav class="footer__links" aria-label="Footer resources">
+            <a href="references.html">References</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 WanderLux Travel. All rights reserved.</p>
+        <p><a href="references.html">References &amp; Credits</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
